@@ -9,7 +9,7 @@ for f in files:
         with open(f'datasets/{f}', 'r') as f:
 
             text = f.read()
-        text = text.replace('\n',' ')
+        # text = text.replace('\n',' ')
         words = text.split(' ')
         
         for i in range(0,len(words) + 100,256):
