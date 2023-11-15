@@ -12,12 +12,12 @@ for f in files:
     text = text.replace('\n','')
     words = text.split(' ')
     
-    for i in range(0,len(words) + 100,256):
+    for i in range(0,len(words) + 100,128):
 
         if i == 0:
-            temp = words[i:(i+1)*512]
+            temp = words[i:(i+1)*128]
         else:
-            temp = words[i-100:(i+1)*256 - 100]
+            temp = words[i-100:(i+1)*128 - 100]
         
         input.append(' '.join(temp))
     
