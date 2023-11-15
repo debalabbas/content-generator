@@ -9,7 +9,7 @@ for f in files:
         with open(f'datasets/{f}', 'r') as f:
 
             text = f.read()
-        text = text.replace('\n','')
+        text = text.replace('\n',' ')
         words = text.split(' ')
         
         for i in range(0,len(words) + 100,256):
@@ -21,7 +21,7 @@ for f in files:
             
             input.append(' '.join(temp))
 
-
+print(len(input))
 with open('datasets/train.json','w') as f:
 
     json.dump(input,f)    
